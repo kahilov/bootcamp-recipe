@@ -1,0 +1,8 @@
+#img{
+    max-height: 100px;
+}
+#food{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr)
+}

@@ -9,11 +9,31 @@
 </head>
 
 <body>
+
+
+    <script id="food-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+        <a href={{video}}>{{title}}</a>
+        <img data-id={{first}} id="img" src = {{ img }}>
+        <div id="ing">{{ingredients}}</div>
+        {{/each}}
+        </script>
+
+    <div id="food"></div>
+
+
+
+
+
+
+
     <input type="text" id="food-input" placeholder="What are you craving?">
-    <button onclick=fetchRecipes() >Find recipes</button>
+    <button onclick=fetchRecipes()>Find recipes</button>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
     <script src="main.js"></script>
+    
 </body>
 
 </html>
