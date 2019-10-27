@@ -7,10 +7,11 @@ router.get('/sanity', function (req, res) {
     res.send("OK")
 })
 router.get('/recipes/:ingridients', function (req, res) {
-    let ingridient = req.params.ingridients
-    request('https://recipes-goodness.herokuapp.com/recipes/'+ingridient, function (err, response) {
-        const recipes = response.body
-        res.send(recipes)
+    let ingridients = req.params.ingridients
+    request('https://recipes-goodness.herokuapp.com/recipes/'+ingridients, function (err, response) {
+        const recipes =JSON.parse(response.body)
+        const recipeData = recipes.results
+        res.send(recipeData)
     })
 })
 

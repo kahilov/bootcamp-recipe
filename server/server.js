@@ -17,3 +17,4 @@ app.use('/', api)
 
 
 app.listen(8080, () => console.log(`Server is up and running smoothly`))
+module.exports =  app
