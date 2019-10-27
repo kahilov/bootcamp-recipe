@@ -16,4 +16,4 @@ app.use('/', api)
 
 
 
-app.listen(3000, () => console.log(`Server is up and running smoothly`))
+app.listen(8080, () => console.log(`Server is up and running smoothly`))
